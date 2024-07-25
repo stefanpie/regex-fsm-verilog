@@ -1,0 +1,36 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-s", "-v", "--cov=digital_design_dataset", "--cov-report=html", "--cov-append"] 
+log_cli = true
+
+
+[tool.ruff]
+line-length = 120
+preview = true
+exclude = [
+    "*.ipynb"
+]
+target-version = "py311"
+
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "CPY",
+    "D",
+    "FIX",
+    "TD",
+    "TRY003",
+    "EM101",
+    "EM102",
+    "FBT001",
+    "FBT002",
+    "RET504",
+    "E266",
+    "PERF401",
+    "S404",
+    "S603",
+    "S607",
+    "PLR0914",
+    "G004"
+]
